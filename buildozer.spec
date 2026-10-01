@@ -33,12 +33,15 @@ orientation = portrait
 # Quyền ứng dụng
 android.permissions = INTERNET
 
-# Cấu hình SDK/NDK tương thích tốt với Docker buildozer hiện tại
+# Cấu hình SDK/NDK tương thích
 android.api = 31
 android.minapi = 21
 android.sdk = 31
 android.ndk = 25b
 android.archs = arm64-v8a
+
+# Tự động chấp nhận bản quyền Android SDK để không bị lỗi
+android.accept_sdk_license = True
 
 [buildozer]
 log_level = 2
