@@ -1,43 +1,44 @@
 [app]
 
-# Tên ứng dụng hiển thị trên điện thoại
+# Tên ứng dụng
 title = App Chuan Tra Cuu
 
-# Tên package (viết thường, liền nhau)
+# Tên package (không dấu, viết thường, liền nhau)
 package.name = appchantracuu
 
-# Domain của bạn
+# Domain
 package.domain = org.tai
 
-# Các định dạng file cần đưa vào APK (đã bao gồm 'png' và 'db')
+# Các định dạng file đưa vào APK
 source.include_exts = py,png,jpg,kv,atlas,db
 
-# Thư mục chứa mã nguồn
+# Thư mục mã nguồn
 source.dir = .
 
-# Các thư mục/file dữ liệu cần nhúng kèm
+# Các thư mục/file nhúng kèm quan trọng
 source.include_patterns = assets/*,database.db,data_raw/*
 
-# Tên file logo chính xác của bạn trên GitHub
+# Tên file icon (logo)
 icon.filename = %(source.dir)s/logo.png
 
-# Phiên bản ứng dụng
+# Phiên bản
 version = 1.0
 
-# Các thư viện Python ứng dụng sử dụng
-requirements = python3,kivy
+# Các thư viện Python bắt buộc
+requirements = python3,kivy,sqlite3
 
-# Màn hình hiển thị (portrait: dọc)
+# Màn hình hiển thị dọc
 orientation = portrait
 
-# Quyền truy cập Internet (nếu app cần)
+# Quyền ứng dụng
 android.permissions = INTERNET
 
-# Cấu hình API Android mục tiêu
-android.api = 33
+# Cấu hình SDK/NDK tương thích tốt với Docker buildozer hiện tại
+android.api = 31
 android.minapi = 21
-android.sdk = 20
+android.sdk = 31
 android.ndk = 25b
+android.archs = arm64-v8a
 
 [buildozer]
 log_level = 2
