@@ -7,11 +7,13 @@ source.dir = .
 source.include_patterns = assets/*,database.db,data_raw/*
 icon.filename = %(source.dir)s/logo.png
 version = 1.0
-requirements = python3,kivy,sqlite3
+
+# Cố định phiên bản cython==0.29.36 ở đây để tránh lỗi biên dịch
+requirements = python3,kivy,cython==0.29.36,sqlite3
+
 orientation = portrait
 android.permissions = INTERNET
 
-# Cấu hình SDK/NDK tương thích
 android.api = 33
 android.minapi = 21
 android.sdk = 33
