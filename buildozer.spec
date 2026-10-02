@@ -12,7 +12,7 @@ package.domain = org.tracuu
 # Thư mục chứa mã nguồn
 source.dir = .
 
-# Các định dạng file đi kèm (bao gồm cả database .db)
+# Các định dạng file đi kèm
 source.include_exts = py,png,jpg,kv,atlas,db
 
 # Phiên bản ứng dụng
