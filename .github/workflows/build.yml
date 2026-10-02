@@ -22,12 +22,7 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Xóa sạch SDK/NDK rác có sẵn của GitHub để tránh xung đột
-        run: |
-          sudo rm -rf /usr/local/lib/android
-          sudo rm -rf /opt/android
-
-      - name: Install system dependencies (with 32-bit support & build tools)
+      - name: Install system dependencies
         run: |
           sudo dpkg --add-architecture i386
           sudo apt-get update
@@ -49,11 +44,12 @@ jobs:
               libtool \
               pkg-config
 
-      - name: Install Buildozer and Cython
+      - name: Install stable Buildozer and Cython
         run: |
           pip install --upgrade pip
           pip install --upgrade setuptools wheel
-          pip install Cython==0.29.36 buildozer python-for-android
+          pip install Cython==0.29.36
+          pip install buildozer==1.5.0
 
       - name: Build APK with Buildozer
         run: |
