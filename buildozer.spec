@@ -8,8 +8,8 @@ source.include_patterns = assets/*,database.db,data_raw/*
 icon.filename = %(source.dir)s/logo.png
 version = 1.0
 
-# Cố định phiên bản cython==0.29.36 ở đây để tránh lỗi biên dịch
-requirements = python3,kivy,cython==0.29.36,sqlite3
+# Đã bỏ sqlite3 vì Python 3 đã tích hợp sẵn
+requirements = python3,kivy,cython==0.29.36
 
 orientation = portrait
 android.permissions = INTERNET
