@@ -24,13 +24,13 @@ requirements = python3,kivy,cython==0.29.36
 # Quyền truy cập mạng
 android.permissions = INTERNET
 
-# Cấu hình Android SDK / NDK chuẩn
-android.api = 33
+# [QUAN TRỌNG] Sử dụng NDK r23b và API 31 để chống lỗi biên dịch phút chót
+android.api = 31
 android.minapi = 21
-android.ndk = 25b
+android.ndk = 23b
 android.accept_sdk_license = True
 
-# [QUAN TRỌNG] Chỉ định đúng 1 kiến trúc chip 64-bit để chống lỗi biên dịch
+# Chỉ định kiến trúc chip 64-bit phổ biến
 android.archs = arm64-v8a
 
 # Hướng màn hình ứng dụng
