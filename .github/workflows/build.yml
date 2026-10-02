@@ -49,8 +49,11 @@ jobs:
 
       - name: Build APK with Buildozer
         run: |
+          # [QUAN TRỌNG] Xóa sạch các biến NDK/SDK mặc định của GitHub để Buildozer tự tải bản 25b chuẩn
           unset ANDROID_HOME
           unset ANDROID_SDK_ROOT
+          unset ANDROID_NDK_ROOT
+          unset ANDROID_NDK
           buildozer -v android debug
 
       - name: Upload APK artifact
