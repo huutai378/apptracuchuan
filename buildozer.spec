@@ -11,7 +11,7 @@ requirements = python3,kivy,sqlite3
 orientation = portrait
 android.permissions = INTERNET
 
-# Cấu hình chuẩn để action tự động biên dịch mượt mà
+# Cấu hình SDK/NDK tương thích
 android.api = 33
 android.minapi = 21
 android.sdk = 33
