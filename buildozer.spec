@@ -9,31 +9,28 @@ package.name = tracuuapp
 # (str) Package domain (needed for android packaging)
 package.domain = org.tracuu
 
-# [QUAN TRỌNG] Thư mục chứa mã nguồn (dấu chấm nghĩa là thư mục hiện tại)
+# Thư mục chứa mã nguồn
 source.dir = .
 
-# (list) Source files to include (thêm các định dạng file anh dùng)
+# Các định dạng file đi kèm
 source.include_exts = py,png,jpg,kv,atlas,db
 
-# (list) Application requirements
+# [QUAN TRỌNG] Khai báo phiên bản ứng dụng để Buildozer không bắt lỗi nữa
+version = 1.0
+
+# Các thư viện Python cần thiết
 requirements = python3,kivy,cython==0.29.36
 
-# (list) Permissions
+# Quyền truy cập mạng
 android.permissions = INTERNET
 
-# (int) Target Android API
+# Cấu hình Android SDK / NDK
 android.api = 33
-
-# (int) Minimum API your APK will support
 android.minapi = 21
-
-# (str) Android NDK version to use
 android.ndk = 25b
-
-# (bool) Automatically accept SDK license
 android.accept_sdk_license = True
 
-# (str) Supported orientations
+# Hướng màn hình ứng dụng
 orientation = portrait
 
 [buildozer]
