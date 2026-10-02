@@ -12,7 +12,7 @@ package.domain = org.tracuu
 # Thư mục chứa mã nguồn
 source.dir = .
 
-# Các định dạng file đi kèm
+# Các định dạng file đi kèm (bao gồm cả database .db của bạn)
 source.include_exts = py,png,jpg,kv,atlas,db
 
 # Phiên bản ứng dụng
@@ -24,10 +24,10 @@ requirements = python3,kivy,cython==0.29.36
 # Quyền truy cập mạng
 android.permissions = INTERNET
 
-# [QUAN TRỌNG] Sử dụng NDK r23b và API 31 để chống lỗi biên dịch phút chót
-android.api = 31
+# Cấu hình chuẩn tương thích tuyệt đối
+android.api = 33
 android.minapi = 21
-android.ndk = 23b
+android.ndk = 25b
 android.accept_sdk_license = True
 
 # Chỉ định kiến trúc chip 64-bit phổ biến
