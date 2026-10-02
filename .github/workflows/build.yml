@@ -11,14 +11,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
-        with:
-          command: buildozer -v android debug
+      - name: Build with Buildozer Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/home/user/hostcwd \
+            kivy/buildozer:latest \
+            android debug
+
+      - name: Fix file permissions
+        if: always()
+        run: sudo chown -R $USER:$USER .
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-release-android
-          path: ${{ steps.buildozer.outputs.filename }}
+          path: bin/*.apk
